@@ -5,14 +5,15 @@ Cette application doit notamment, en s'appuyant sur JavaScript, afficher une car
 
 L’application doit être développée en JavaScript côté client. Vous ne devez écrire aucun code côté serveur (l’utilisation de PHP ou d'un serveur Node.js, notamment, est interdite).
 
-Instructions
+<h2>Instructions</h2>
 
-Diaporama
+<h3>Diaporama</h3>
 
 Vous devez afficher en haut de la page un diaporama de photos et de textes expliquant le fonctionnement de l'application. La logique du diaporama doit être écrite par vos soins. L’utilisation de tout plugin automatisant la logique de l’application est proscrite.
 
 Le diaporama passe automatiquement à la diaporama suivante toutes les 5 secondes. L’utilisateur peut toutefois choisir de mettre le diaporama en pause. Il peut également reculer ou avancer manuellement à l’aide d’un clic de souris, ainsi qu’avec les touches gauche et droite de son clavier.
-Carte des vélos
+
+<h3>Carte des vélos</h3>
 
 En dessous du diaporama se trouve une carte affichant en temps réel la liste des stations de location de vélos ainsi que leur disponibilité.  La localisation de toutes les stations de vélos est affichée à l’aide de marqueurs.
 
@@ -24,7 +25,7 @@ Un clic sur un marqueur affiche l’état de la station dans un panneau construi
 
 La carte doit être générée dynamiquement via un service de cartographie.
 
-<h2>Réservation d'un vélo</h2>
+<h3>Réservation d'un vélo</h2>
 
 Il doit être possible de réserver un vélo disponible à la station sélectionnée en :
 
@@ -46,7 +47,7 @@ Le nom et le prénom sont toutefois conservés par le navigateur pour prérempli
 Il ne peut y avoir qu'une réservation à la fois. Si une nouvelle réservation a lieu, elle remplace la précédente.
 
 
-Contraintes techniques
+<h2>Contraintes techniques</h2>
 
 Le code JavaScript doit être conçu en Programmation Orientée Objet.
 
