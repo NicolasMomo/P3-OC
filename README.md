@@ -24,12 +24,12 @@ Un clic sur un marqueur affiche l’état de la station dans un panneau construi
 
 La carte doit être générée dynamiquement via un service de cartographie.
 
-Réservation d'un vélo
+<h2>Réservation d'un vélo</h2>
 
 Il doit être possible de réserver un vélo disponible à la station sélectionnée en :
 
-    indiquant son nom et son prénom,
-    signant dans un champ libre implémenté à l’aide de l’API HTML5 Canvas.
+ -  indiquant son nom et son prénom,
+ -  signant dans un champ libre implémenté à l’aide de l’API HTML5 Canvas.
 
 Vous devez écrire vous même le code du Canvas. Aucun plugin n’est autorisé. Vous devez être capable d’expliquer votre code lors de la soutenance.
 
