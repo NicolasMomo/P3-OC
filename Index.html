@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Projet 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Retrouvez les différentes stations de location de vélos à Lyon, le nombre de vélos disponibles, et réservez-en un." />
+
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" type="text/css" href="../css/projet3.css" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@LocationVélo">
+    <meta name="twitter:title" content="LocationVélo, location de vélos sur Lyon">
+    <meta name="twitter:description" content="LocationVelo, choisissez votre station, résèrvez votre vélo, roulez !">
+    <meta name="twitter:image" content="http://www.locatiovelosoc.fr/logo.png">
+    <meta name="twitter:image:alt" content="LocationVélo">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="LocationVélo, location de vélos sur Lyon" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.locationvelosoc.fr/" />
+    <meta property="og:image" content="http://www.locationvelooc.fr/logo.png" />
+    <meta property="og:description" content="LocationVelo, choisissez votre station, résèrvez votre vélo, roulez !" />
+
+</head>
+
+<body>
+
+    <!--     Slider     -->
+
+    <header>
+        <div id="diaporama">
+            <button id="bouttonGauche">&#10094;</button>
+
+            <div id="caroussel">
+
+                <figure class="item">
+                    <img src="../Slider/Sans%20titre-1.jpg">
+                </figure>
+
+
+                <figure class="item">
+                    <img src="../Slider/Sans%20titre-2.jpg">
+                </figure>
+
+
+                <figure class="item">
+                    <img src="../Slider/Sans%20titre-3.jpg">
+                </figure>
+
+
+                <figure class="item">
+                    <img src="../Slider/Sans%20titre-4.jpg">
+                </figure>
+            </div>
+
+            <button id="bouttonDroit">&#10095;</button>
+        </div>
+
+        <button id="pause">Pause &#10074;&#10074;</button>
+        <button id="play">Play &#9658;</button>
+
+    </header>
+
+
+    <!--     Carte et Info Station     -->
+
+    <section>
+
+        <div id="carte">
+        </div>
+
+        <div id="conteneur_info">
+            <form method="post" action="#">
+                <fieldset>
+                    <legend>Détails de la station</legend>
+                    <div id="listeInfo">
+                        <p>Adresse : <span id="infoStation"></span></p>
+                        <p id="nomStation"></p>
+                        <p id="placesStation"></p>
+                        <p id="velosDispo"></p>
+                        <p id="statut"></p>
+                    </div>
+                    <p id="pNom"><label>Nom : </label><input type="text" name="nom" id="nom" placeholder="Nom" value="" required /></p>
+                    <p id="pPrenom"><label>Prénom : </label><input type="text" name="prenom" id="prenom" placeholder="Prénom" required /></p>
+                    <div class="bouton">
+                        <input type="submit" value="Réserver" id="reserver" />
+                        <input type="button" value="Annuler" id="annuler" />
+                    </div>
+
+                </fieldset>
+            </form>
+            <div id="erreur">
+                <p id="erreurInformation"></p>
+                <input type="button" name="ok" value="Ok" id="ok">
+            </div>
+            <div id="ecraserResa">
+                <p id="ecraserInformation">Voulez vous écraser votre réservation en cours ?</p>
+                <input type="button" name="yes" value="Oui" id="yes">
+                <input type="button" name="no" value="Non" id="no">
+            </div>
+            <div id="annulation">
+                <p id="demandeAnnulation">Voulez vous vraiment annuler votre réservation ?</p>
+                <div class="bouton2">
+                    <input type="button" name="oui" value="Oui" id="oui">
+                    <input type="button" name="non" value="Non" id="non">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div id="velov">
+    </div>
+
+    <div id="containerCanvas">
+        <canvas id="signature" width="380" height="200"></canvas> <!-- Canvas -->
+        <!-- Bouton du canvas -->
+        <div id="boutonCanvas">
+            <p class="bouton"><button id="boutonValider">Valider</button></p> <!-- Bouton Valider -->
+            <p class="bouton"><button id="boutonEffacer">Effacer</button></p> <!-- Bouton Effacer -->
+        </div>
+    </div> <!-- fin cadre signature -->
+
+    <div id="veloReserve">
+        <p id="infoReservation">Vélo reservé à la station <span id="nomStationReserve"></span> par <span id="nomClient"></span><br />
+            <span id="chrono"></span></p>
+    </div>
+
+    <footer>
+        <p><img src="../css/logo.jpg" /></p>
+        <hr color="gray" />
+        <div><a href="../html/mentions.html">Mentions Légales</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="../html/donnees.html">Politique de protection des données personnelles</a></div>
+    </footer>
+
+    <script src="../js/ajax.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/map.js"></script>
+    <script src="../js/canvas.js"></script>
+    <script src="../js/reservation.js"></script>
+    <script src="../js/timer.js"></script>
+
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNR0N5nOM0FK95UQdVn8EYlJxMNFQ_yZQ&callback=initApp"></script>
+
+</body>
+
+</html>
